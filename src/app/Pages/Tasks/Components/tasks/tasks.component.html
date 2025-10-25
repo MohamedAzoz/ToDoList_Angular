@@ -1,0 +1,27 @@
+<div class="container">
+  <table
+    class="table table-primary table-bordered text-center table-responsive table-hover table-text"
+  >
+    <thead>
+      <tr class="row">
+        <th class="col flexStyle">Name</th>
+        <th class="col flexStyle">Start Date</th>
+        <th class="col flexStyle">End Date</th>
+        <th class="col flexStyle"></th>
+        <th class="col flexStyle"></th>
+      </tr>
+    </thead>
+    <tbody class="table-content">
+      @for (task of Tasks; track $index) {
+      <tr class="row">
+        <td class=" col flexStyle">{{ task.name |uppercase}}</td>
+        <td class="table-content col flexStyle">{{ task.start|date}}</td>
+        <td class="table-content col flexStyle">{{ task.end |date}}</td>
+        
+        <td class=" col flexStyle"><a (click)="Delete(task.id!)" class="col-4 btn del"><img class="imgWidth img-fluid" [src]="ImgUrl" alt="Delete Image"></a></td>
+        <td class=" col flexStyle"><a [routerLink]="['/main/task',task.id]" class="col-4 btn show"><img class="imgWidth img-fluid" [src]="ImgUrlShow" alt="Show Details"></a></td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

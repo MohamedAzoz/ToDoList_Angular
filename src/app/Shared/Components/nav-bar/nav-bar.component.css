@@ -1,0 +1,18 @@
+*{
+    /* font-size: 1rem; */
+    font-weight: 500;
+}
+.Nav{
+    background-color: #2C3E50;
+}
+.color{
+    color: #FFFFFF;
+}
+.text-bg{
+    background-color: gold !important;
+    color: #000;
+}
+.imgWidth{
+    width: 20vb;
+    height: 9vb;
+}

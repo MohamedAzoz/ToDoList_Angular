@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="row mb-3 text-bg-light">
+    <div
+      class="col-8 d-grid justify-content-around align-content-around fw-bold fs-5"
+    >
+      <p class="text-center">Task Name : {{ Task.name }}</p>
+      <p class="text-center">Start Time : {{ Task.start }}</p>
+      <p class="text-center">End Time : {{ Task.end }}</p>
+    </div>
+  </div>
+  <div class="row my-5 d-grid justify-content-center">
+    <ul class="pagination">
+      <li class="page-item">
+        <button
+          class="page-link"
+          aria-label="Previous"
+          (click)="prevfun()"
+          [disabled]="id == all_ids[0]"
+        >
+          <span aria-hidden="true">&laquo;</span>
+        </button>
+      </li>
+      <li class="page-item">
+        <button
+          class="page-link"
+          aria-label="Next"
+          (click)="nextfun()"
+          [disabled]="id == all_ids[all_ids.length - 1]"
+        >
+          <span aria-hidden="true">&raquo;</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="row my-5 d-flex justify-content-end">
+    <button
+      class="btn btn-secondary col-2 me-5 py-2 fw-bold fs-5"
+      (click)="goback()"
+    >
+      Go back
+    </button>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<div
+  class="w-75 container my-2 d-flex justify-content-center align-items-center"
+>
+  <form
+    id="form"
+    class="form-control bg-info gap-2"
+    [formGroup]="TaskData"
+    (ngSubmit)="AddTask()"
+  >
+    <div class="mb-3">
+      <label for="name" class="form-label">Task</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="name"
+        id="name"
+        name="name"
+      />
+      <div class="d-block text-danger">
+        @if (name?.touched && name?.getError('required')) {
+        <p class="is-invalid">field is required</p>
+        }
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="Start" class="form-label">Start Time</label>
+      <input
+        type="datetime-local"
+        class="form-control"
+        id="start"
+        name="start"
+        formControlName="start"
+      />
+      <div class="d-block text-danger">
+        @if (start?.touched && start?.getError('required')) {
+        <p class="is-invalid">field is required</p>
+        }
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="end" class="form-label">End Time</label>
+      <input
+        type="datetime-local"
+        class="form-control"
+        formControlName="end"
+        id="end"
+        name="end"
+      />
+      <div class="d-block text-danger">
+        @if (end?.touched && end?.getError('required')) {
+        <p class="is-invalid">field is required</p>
+        }
+      </div>
+    </div>
+     <input type="submit" [disabled]="TaskData.invalid" class="btn btn-primary" value="Add Task">
+  </form>
+</div>

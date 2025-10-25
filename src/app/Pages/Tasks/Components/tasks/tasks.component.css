@@ -1,0 +1,29 @@
+.table-text{
+    color: #212121;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.table-content{
+    color: #757575;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.del{
+    background-color: #E74C3C;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.show{
+    background-color: #2ECC71;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.flexStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgWidth{
+    width: 16vb;
+    height: 5vb;
+}

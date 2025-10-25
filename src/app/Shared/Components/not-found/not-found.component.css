@@ -1,0 +1,25 @@
+:host {
+    height: 100vb;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    display: grid;
+    place-content: center center;
+    place-items:center center ;
+}
+
+.error-container {
+    background-color: black;
+    color: red;
+    border-radius: 10%;
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.error-actions {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.error-actions .btn {
+    margin-right: 10px;
+}
